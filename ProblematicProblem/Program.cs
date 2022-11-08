@@ -92,7 +92,20 @@ namespace ProblematicProblem
 
                     Console.WriteLine();
                     Console.WriteLine("Would you like to add more? yes/no: ");
-                    addToList = bool.Parse(Console.ReadLine());
+                    //addToList = bool.Parse(Console.ReadLine());
+                    switch (Console.ReadLine().ToLower())
+                    {
+                        case "yes":
+                        case "yeah":
+                        case "sure":
+                        case "y":
+                        case "yup":
+                            addToList = true;
+                            break;
+                        default:
+                            addToList = false;
+                            break;
+                    }
                 }
             }
 
